@@ -1,5 +1,6 @@
 package com.example.administrator.provider;
 
+import android.content.ContentProvider;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -18,26 +19,40 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //        ContentResolver contentResolver=this.getContentResolver();
-       uri=Uri.parse("content://provider/person");
+//       uri=Uri.parse("content://provider/person");
 
     }
-    public void onClick(View view){
-        resolver = getContentResolver();
-        switch (view.getId()) {
-            case R.id.add:
-                ContentValues content = new ContentValues();
-                content.put("age",8);
-                content.put("sex","M");
-                resolver.insert(uri, content);
-
-                break;
-            case R.id.delete:
-                break;
-            case R.id.updata:
-                break;
-            case R.id.query:
-                break;
-
-        }
-    }
+//    public void onClick(View view){
+//        resolver = getContentResolver();
+//        switch (view.getId()) {
+//            case R.id.add:
+//                ContentValues content = new ContentValues();
+//                content.put("age",8);
+//                content.put("sex","M");
+//                resolver.insert(uri, content);
+//
+//                break;
+//            case R.id.delete:
+//                resolver.delete(uri,"sex=?",new String[]{"M"});
+//                break;
+//            case R.id.updata:
+//                ContentValues content1 = new ContentValues();
+//                content1.put("age",111);
+//                content1.put("sex","Man");
+//                resolver.update(uri,content1,"sex=?",new String[]{"M"});
+//                break;
+//            case R.id.query:
+//                resolver.query(uri,null,null,null,null);
+//                break;
+//            case R.id.call:
+//                String method = "mymethod";
+//                Bundle bundle = resolver.call(uri, method, null, null);
+////                System.out.println("调用结果：" + bundle.getBoolean(method));
+//                String  name = (String) bundle.get("name");
+//                Log.e("===============", "onClick: "+name );
+//
+//                break;
+//
+//        }
+//    }
 }

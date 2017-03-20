@@ -4,10 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by Administrator on 2016/12/7.
- */
-
 public class OpenSql extends SQLiteOpenHelper {
     public static final String Name = "person";
     public static final int Version = 1;
